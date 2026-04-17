@@ -1,0 +1,34 @@
+Algorithm: Library Management System
+1. Add New Book (addBook)
+Step 1: Open the data file (library.dat) in Append Mode.
+Step 2: Input the Book ID, Name, and Author from the user.
+Step 3: Set the issued status to 0 (meaning the book is available).
+Step 4: Write the entire object data into the file.
+Step 5: Close the file and display a success message. 
+2. Display Available Books (showBooks)
+Step 1: Open the data file in Read Mode.
+Step 2: Read the file object by object until the end of the file.
+Step 3: For each object, check if the issued flag is 0.
+Step 4: If 0, display the Book ID, Name, and Author.
+Step 5: Close the file. 
+3. Issue a Book (issueBook)
+Step 1: Get the specific Book ID from the user.
+Step 2: Open the file in Input/Output (Read/Write) Mode.
+Step 3: Search for the record where the book_id matches the user input and issued is 0.
+Step 4: Once found, change the issued flag to 1.
+Step 5: Determine the current file pointer position and move it back by the size of one object.
+Step 6: Overwrite the record with the updated status.
+Step 7: Close the file. 
+4. Return a Book (returnBook)
+Step 1: Get the specific Book ID from the user.
+Step 2: Open the file in Input/Output Mode.
+Step 3: Search for the record where the book_id matches and issued is 1.
+Step 4: Once found, change the issued flag back to 0.
+Step 5: Calculate the position, move the pointer back, and overwrite the record.
+Step 6: Close the file. 
+5. Main Control Loop (main)
+Step 1: Initialize the Library object.
+Step 2: Start an infinite loop to display the menu.
+Step 3: Take the user's choice (1-5).
+Step 4: Use a Switch Case to call the corresponding function.
+Step 5: If the user chooses 5, terminate the program. 
